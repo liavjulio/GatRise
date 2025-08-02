@@ -121,14 +121,20 @@ body::before {
 }
 
 /* 
-=== SECTION ICONS ===
-Each main section has an icon at the start with gradient background:
-- Benefits: ✅ (green gradient)
-- Usage: 💧 (blue gradient) 
-- Testimonials: ⭐ (yellow gradient)
-- Pricing: 💸 (purple gradient)
-- FAQ: ❓ (indigo gradient)
-- Final CTA: 💬 (red gradient)
+=== SECTION ICONS & FANCY CONTAINERS ===
+Each main section has:
+1. An icon at the start with gradient background:
+   - Benefits: ✅ (green gradient)
+   - Usage: 💧 (blue gradient) 
+   - Testimonials: ⭐ (yellow gradient)
+   - Pricing: 💸 (purple gradient)
+   - FAQ: ❓ (indigo gradient)
+   - Final CTA: 💬 (red gradient)
+
+2. Fancy text containers for premium look:
+   - .fancy-text-container (main container style)
+   - .fancy-text-container-alt (alternate container style)
+   Both include: glass effect, subtle gradients, blur effects
 ================================
 */
 
@@ -166,6 +172,71 @@ Each main section has an icon at the start with gradient background:
   background: rgba(42, 42, 42, 0.4);
   color: #ffffff;
   padding: 4rem 0;
+}
+
+/* Fancy Container Styles for Text Sections */
+.fancy-text-container {
+  background: rgba(26, 26, 26, 0.7);
+  border: 1px solid rgba(68, 68, 68, 0.5);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(15px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.fancy-text-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(34, 197, 94, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fancy-text-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.fancy-text-container-alt {
+  background: rgba(42, 42, 42, 0.7);
+  border: 1px solid rgba(68, 68, 68, 0.5);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(15px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.fancy-text-container-alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fancy-text-container-alt > * {
+  position: relative;
+  z-index: 1;
 }
 
 .reference-card {

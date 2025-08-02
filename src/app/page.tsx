@@ -151,32 +151,33 @@ export default function Home() {
       {/* Benefits Section */}
       <section id="benefits" className="reference-section">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">✅</span>
+          <div className="fancy-text-container">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mb-6 mx-auto">
+                <span className="text-3xl">✅</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
+                מה GatRise עושה עבורך?
+              </h2>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
-              מה GatRise עושה עבורך?
-            </h2>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="reference-card text-center reference-hover-lift">
-                <div className="text-4xl mb-4">🔥</div>
-                <h3 className="text-lg font-semibold mb-3 reference-text-primary">מדכא תיאבון</h3>
-                <p className="reference-text-secondary text-sm leading-relaxed">
-                  מפחית רעב, ונותן תחושת שובע
-                </p>
-              </div>
-              
-              <div className="reference-card text-center reference-hover-lift">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-lg font-semibold mb-3 reference-text-primary">מעניק אנרגיה נקייה</h3>
-                <p className="reference-text-secondary text-sm leading-relaxed">
-                  לאורך היום – בלי קפאין, בלי התרסקות
-                </p>
-              </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="reference-card text-center reference-hover-lift">
+                  <div className="text-4xl mb-4">🔥</div>
+                  <h3 className="text-lg font-semibold mb-3 reference-text-primary">מדכא תיאבון</h3>
+                  <p className="reference-text-secondary text-sm leading-relaxed">
+                    מפחית רעב, ונותן תחושת שובע
+                  </p>
+                </div>
+                
+                <div className="reference-card text-center reference-hover-lift">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-lg font-semibold mb-3 reference-text-primary">מעניק אנרגיה נקייה</h3>
+                  <p className="reference-text-secondary text-sm leading-relaxed">
+                    לאורך היום – בלי קפאין, בלי התרסקות
+                  </p>
+                </div>
               
               <div className="reference-card text-center reference-hover-lift">
                 <div className="text-4xl mb-4">🎯</div>
@@ -206,21 +207,22 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="reference-card reference-hover-lift">
-              <div className="text-4xl mb-4">🌱</div>
-              <h3 className="text-xl font-semibold mb-4 reference-text-primary">טבעי לחלוטין</h3>
-              <p className="reference-text-secondary leading-relaxed">
-                ללא חומרים כימיים, לא ממכר
-              </p>
-            </div>
-            
-            <div className="reference-card reference-hover-lift">
-              <div className="text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold mb-4 reference-text-primary">השפעה מיידית</h3>
-              <p className="reference-text-secondary leading-relaxed">
-                מרגישים את ההשפעה תוך דקות – כבר מהשימוש הראשון!
-              </p>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="reference-card reference-hover-lift">
+                <div className="text-4xl mb-4">🌱</div>
+                <h3 className="text-xl font-semibold mb-4 reference-text-primary">טבעי לחלוטין</h3>
+                <p className="reference-text-secondary leading-relaxed">
+                  ללא חומרים כימיים, לא ממכר
+                </p>
+              </div>
+              
+              <div className="reference-card reference-hover-lift">
+                <div className="text-4xl mb-4">📈</div>
+                <h3 className="text-xl font-semibold mb-4 reference-text-primary">השפעה מיידית</h3>
+                <p className="reference-text-secondary leading-relaxed">
+                  מרגישים את ההשפעה תוך דקות – כבר מהשימוש הראשון!
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -229,50 +231,52 @@ export default function Home() {
       {/* Usage Section */}
       <section className="reference-section-alt">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">💧</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
-              איך משתמשים?
-            </h2>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="reference-card text-center reference-hover-lift">
-                <div className="text-4xl md:text-6xl mb-4">1️⃣</div>
-                <h3 className="text-lg md:text-xl font-semibold mb-4 reference-text-primary">טפטפו 5-7 טיפות</h3>
-                <p className="reference-text-secondary text-sm">
-                  מתחת ללשון (אפשר גם בכוס מים)
-                </p>
+          <div className="fancy-text-container-alt">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full mb-6 mx-auto">
+                <span className="text-3xl">💧</span>
               </div>
-              
-              <div className="reference-card text-center reference-hover-lift">
-                <div className="text-4xl md:text-6xl mb-4">2️⃣</div>
-                <h3 className="text-lg md:text-xl font-semibold mb-4 reference-text-primary">המתינו</h3>
-                <p className="reference-text-secondary text-sm">
-                  1–2 דקות לספיגה מלאה
-                </p>
-              </div>
-              
-              <div className="reference-card text-center reference-hover-lift">
-                <div className="text-4xl md:text-6xl mb-4">3️⃣</div>
-                <h3 className="text-lg md:text-xl font-semibold mb-4 reference-text-primary">הרגישו</h3>
-                <p className="reference-text-secondary text-sm">
-                  שליטה, שובע, פוקוס ואנרגיה חדשה
-                </p>
-              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
+                איך משתמשים?
+              </h2>
             </div>
             
-            <div className="relative">
-              <Image
-                src="/images/photo3.jpeg"
-                alt="GatRise - שימוש נכון של המוצר"
-                width={500}
-                height={500}
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl reference-hover-lift"
-              />
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="reference-card text-center reference-hover-lift">
+                  <div className="text-4xl md:text-6xl mb-4">1️⃣</div>
+                  <h3 className="text-lg md:text-xl font-semibold mb-4 reference-text-primary">טפטפו 5-7 טיפות</h3>
+                  <p className="reference-text-secondary text-sm">
+                    מתחת ללשון (אפשר גם בכוס מים)
+                  </p>
+                </div>
+                
+                <div className="reference-card text-center reference-hover-lift">
+                  <div className="text-4xl md:text-6xl mb-4">2️⃣</div>
+                  <h3 className="text-lg md:text-xl font-semibold mb-4 reference-text-primary">המתינו</h3>
+                  <p className="reference-text-secondary text-sm">
+                    1–2 דקות לספיגה מלאה
+                  </p>
+                </div>
+                
+                <div className="reference-card text-center reference-hover-lift">
+                  <div className="text-4xl md:text-6xl mb-4">3️⃣</div>
+                  <h3 className="text-lg md:text-xl font-semibold mb-4 reference-text-primary">הרגישו</h3>
+                  <p className="reference-text-secondary text-sm">
+                    שליטה, שובע, פוקוס ואנרגיה חדשה
+                  </p>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <Image
+                  src="/images/photo3.jpeg"
+                  alt="GatRise - שימוש נכון של המוצר"
+                  width={500}
+                  height={500}
+                  className="w-full h-96 object-cover rounded-2xl shadow-2xl reference-hover-lift"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -281,7 +285,7 @@ export default function Home() {
       {/* Warning Section */}
       <section className="reference-section py-12">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="fancy-text-container max-w-4xl mx-auto text-center">
             <div className="reference-card">
               <h3 className="text-2xl font-bold mb-4 text-yellow-400">⚠️ שימו לב:</h3>
               <div className="text-lg reference-text-secondary space-y-2">
@@ -296,66 +300,68 @@ export default function Home() {
       {/* Testimonials Section */}
       <section id="testimonials" className="reference-section-alt">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">⭐</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
-              לקוחות ממליצים:
-            </h2>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
-            <div className="reference-card reference-hover-lift">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="text-yellow-500 text-xl">⭐⭐⭐⭐⭐</div>
+          <div className="fancy-text-container">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mb-6 mx-auto">
+                <span className="text-3xl">⭐</span>
               </div>
-              <blockquote className="text-lg reference-text-primary leading-relaxed mb-6 font-medium">
-                ירדתי 4 קילו תוך חודש וחצי בלי לשנות כמעט כלום. תחושת שובע משוגעת ויעילה - זה המוצר הראשון שהרגשתי ממנו שיפור אמיתי בלי רעב ובלי עצבנות.
-              </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 reference-bg-green rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  מ
-                </div>
-                <div>
-                  <div className="font-bold reference-text-primary">מעיין</div>
-                  <div className="text-sm reference-text-muted">בת 33, תל אביב</div>
-                </div>
-              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
+                לקוחות ממליצים:
+              </h2>
             </div>
             
-            <div className="reference-card reference-hover-lift">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="text-yellow-500 text-xl">⭐⭐⭐⭐⭐</div>
-              </div>
-              <blockquote className="text-lg reference-text-primary leading-relaxed mb-6 font-medium">
-                אני מתרכז פי 2 בעבודה. והאמת? גם החשק המיני עלה. פשוט שקט בראש, ממליץ בחום לכל מי שעבר אוזמפיק.
-              </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 reference-bg-green rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  ד
+            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+              <div className="reference-card reference-hover-lift">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="text-yellow-500 text-xl">⭐⭐⭐⭐⭐</div>
                 </div>
-                <div>
-                  <div className="font-bold reference-text-primary">דניאל</div>
-                  <div className="text-sm reference-text-muted">בן 39, חיפה</div>
+                <blockquote className="text-lg reference-text-primary leading-relaxed mb-6 font-medium">
+                  ירדתי 4 קילו תוך חודש וחצי בלי לשנות כמעט כלום. תחושת שובע משוגעת ויעילה - זה המוצר הראשון שהרגשתי ממנו שיפור אמיתי בלי רעב ובלי עצבנות.
+                </blockquote>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 reference-bg-green rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    מ
+                  </div>
+                  <div>
+                    <div className="font-bold reference-text-primary">מעיין</div>
+                    <div className="text-sm reference-text-muted">בת 33, תל אביב</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="reference-card reference-hover-lift">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="text-yellow-500 text-xl">⭐⭐⭐⭐⭐</div>
-              </div>
-              <blockquote className="text-lg reference-text-primary leading-relaxed mb-6 font-medium">
-                פשוט עובד. טעם טבעי, תחושה טובה, בלי כאבי ראש.
-              </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 reference-bg-green rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  א
+              
+              <div className="reference-card reference-hover-lift">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="text-yellow-500 text-xl">⭐⭐⭐⭐⭐</div>
                 </div>
-                <div>
-                  <div className="font-bold reference-text-primary">אור</div>
-                  <div className="text-sm reference-text-muted">בן 27</div>
+                <blockquote className="text-lg reference-text-primary leading-relaxed mb-6 font-medium">
+                  אני מתרכז פי 2 בעבודה. והאמת? גם החשק המיני עלה. פשוט שקט בראש, ממליץ בחום לכל מי שעבר אוזמפיק.
+                </blockquote>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 reference-bg-green rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    ד
+                  </div>
+                  <div>
+                    <div className="font-bold reference-text-primary">דניאל</div>
+                    <div className="text-sm reference-text-muted">בן 39, חיפה</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="reference-card reference-hover-lift">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="text-yellow-500 text-xl">⭐⭐⭐⭐⭐</div>
+                </div>
+                <blockquote className="text-lg reference-text-primary leading-relaxed mb-6 font-medium">
+                  פשוט עובד. טעם טבעי, תחושה טובה, בלי כאבי ראש.
+                </blockquote>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 reference-bg-green rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    א
+                  </div>
+                  <div>
+                    <div className="font-bold reference-text-primary">אור</div>
+                    <div className="text-sm reference-text-muted">בן 27</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -510,17 +516,18 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="order" className="reference-section">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">💸</span>
+          <div className="fancy-text-container-alt">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mb-6 mx-auto">
+                <span className="text-3xl">💸</span>
+              </div>
+              <div className="inline-block bg-yellow-400 text-yellow-900 px-6 py-2 rounded-full text-sm font-bold mb-6">
+                🔥 מחיר השקה מוגבל
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
+                מחיר השקה מוגבל:
+              </h2>
             </div>
-            <div className="inline-block bg-yellow-400 text-yellow-900 px-6 py-2 rounded-full text-sm font-bold mb-6">
-              🔥 מחיר השקה מוגבל
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
-              מחיר השקה מוגבל:
-            </h2>
-          </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Package 1 */}
@@ -583,10 +590,11 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="text-center mt-12">
-            <div className="reference-card p-6 max-w-2xl mx-auto">
-              <p className="text-lg reference-green mb-2">📦 המחירים כוללים משלוח במרכז</p>
-              <p className="text-lg reference-green">🛡️ אחריות מלאה – לא מרוצה? החזר כספי תוך 48 שעות</p>
+            <div className="text-center mt-12">
+              <div className="reference-card p-6 max-w-2xl mx-auto">
+                <p className="text-lg reference-green mb-2">📦 המחירים כוללים משלוח במרכז</p>
+                <p className="text-lg reference-green">🛡️ אחריות מלאה – לא מרוצה? החזר כספי תוך 48 שעות</p>
+              </div>
             </div>
           </div>
         </div>
@@ -595,34 +603,36 @@ export default function Home() {
       {/* FAQ Section */}
       <section id="faq" className="reference-section-alt">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">❓</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
-              שאלות נפוצות (FAQ):
-            </h2>
-          </div>
-          
-          <div className="max-w-4xl mx-auto space-y-6">
-            <div className="reference-card">
-              <h3 className="text-xl font-semibold mb-3 reference-text-primary">ש: זה מתאים גם אם אני לא עושה דיאטה קפדנית?</h3>
-              <p className="reference-text-secondary">ת: כן. GatRise מדכא תיאבון באופן טבעי גם בלי תפריט מחמיר.</p>
+          <div className="fancy-text-container">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mb-6 mx-auto">
+                <span className="text-3xl">❓</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
+                שאלות נפוצות (FAQ):
+              </h2>
             </div>
             
-            <div className="reference-card">
-              <h3 className="text-xl font-semibold mb-3 reference-text-primary">ש: תוך כמה זמן מרגישים שינוי?</h3>
-              <p className="reference-text-secondary">ת: ברוב המקרים – תוך 10–20 דקות.</p>
-            </div>
-            
-            <div className="reference-card">
-              <h3 className="text-xl font-semibold mb-3 reference-text-primary">ש: זה חוקי ובטוח?</h3>
-              <p className="reference-text-secondary">ת: 100% טבעי, ללא מרשם. אך לא מיועד לחולי לב או סוכרת.</p>
-            </div>
-            
-            <div className="reference-card">
-              <h3 className="text-xl font-semibold mb-3 reference-text-primary">ש: כמה זמן מחזיק בקבוקון?</h3>
-              <p className="reference-text-secondary">ת: בממוצע – בין 2 ל-3 שבועות של שימוש יומיומי.</p>
+            <div className="max-w-4xl mx-auto space-y-6">
+              <div className="reference-card">
+                <h3 className="text-xl font-semibold mb-3 reference-text-primary">ש: זה מתאים גם אם אני לא עושה דיאטה קפדנית?</h3>
+                <p className="reference-text-secondary">ת: כן. GatRise מדכא תיאבון באופן טבעי גם בלי תפריט מחמיר.</p>
+              </div>
+              
+              <div className="reference-card">
+                <h3 className="text-xl font-semibold mb-3 reference-text-primary">ש: תוך כמה זמן מרגישים שינוי?</h3>
+                <p className="reference-text-secondary">ת: ברוב המקרים – תוך 10–20 דקות.</p>
+              </div>
+              
+              <div className="reference-card">
+                <h3 className="text-xl font-semibold mb-3 reference-text-primary">ש: זה חוקי ובטוח?</h3>
+                <p className="reference-text-secondary">ת: 100% טבעי, ללא מרשם. אך לא מיועד לחולי לב או סוכרת.</p>
+              </div>
+              
+              <div className="reference-card">
+                <h3 className="text-xl font-semibold mb-3 reference-text-primary">ש: כמה זמן מחזיק בקבוקון?</h3>
+                <p className="reference-text-secondary">ת: בממוצע – בין 2 ל-3 שבועות של שימוש יומיומי.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -631,7 +641,7 @@ export default function Home() {
       {/* Final CTA Section */}
       <section className="reference-section">
         <div className="container mx-auto text-center px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="fancy-text-container-alt max-w-4xl mx-auto">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-600 rounded-full mb-6 mx-auto">
               <span className="text-3xl">💬</span>
             </div>
