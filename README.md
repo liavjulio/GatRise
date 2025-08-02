@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GatRise - Natural Weight Loss Landing Page
+
+A premium, responsive landing page for GatRise - a natural GAT extract product for weight loss, focus, and energy enhancement. Built with Next.js 15, TypeScript, and Tailwind CSS with direct WhatsApp integration.
+
+## Product Features
+
+GatRise is a natural supplement that offers:
+- **Weight Loss**: Natural appetite suppression and satiety
+- **Energy Boost**: Clean energy without caffeine crashes
+- **Enhanced Focus**: Improved concentration for work and daily tasks
+- **Libido Enhancement**: Natural boost to sexual desire
+- **100% Natural**: No chemical additives, non-addictive
+- **Fast Acting**: Effects felt within minutes of use
+
+## Website Features
+
+- **Modern Design**: Premium, health-focused design with green/emerald color scheme
+- **Hebrew Content**: Full RTL support for Israeli market
+- **Responsive Design**: Mobile-first approach that works on all devices
+- **Direct WhatsApp Contact**: Customers contact you directly via WhatsApp
+- **Phone Integration**: One-tap calling for mobile users
+- **Product Gallery**: Showcases product images from multiple angles
+- **Social Proof**: Customer testimonials and reviews
+- **Clear Pricing**: Transparent pricing with package deals
+- **Safety Information**: Medical disclaimers and usage warnings
+
+## Contact Integration
+
+This landing page uses **direct contact** approach:
+- **WhatsApp buttons** throughout the page (972505772843)
+- **Pre-filled messages** in Hebrew for easy customer communication
+- **Phone number** for direct calling
+- **No forms** - customers contact you directly
+- **Immediate engagement** - no waiting for callbacks
 
 ## Getting Started
 
-First, run the development server:
-
+1. **Clone and install**:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository>
+cd GatRise
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Run development server**:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Open in browser**: [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Customize WhatsApp number** (if needed):
+   - Edit phone number in `src/app/page.tsx`
+   - Search for `972505772843` and replace with your number
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── src/
+│   └── app/
+│       ├── page.tsx          # Main landing page with WhatsApp integration
+│       ├── layout.tsx        # Root layout
+│       └── globals.css       # Global styles
+├── public/
+│   └── images/              # Place your images here
+├── .github/
+│   └── copilot-instructions.md  # Copilot configuration
+└── README.md
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding Your Images
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Place your images in the `/public/images/` folder
+2. Update the gallery section in `/src/app/page.tsx` to use your actual images
+3. Replace placeholder content with Next.js Image components
 
-## Deploy on Vercel
+## Customization
+
+The landing page is fully customizable:
+
+- **Colors**: Modify the gradient colors in `page.tsx`
+- **Content**: Update text content for your business
+- **Sections**: Add, remove, or modify sections as needed
+- **Styling**: Tailwind classes can be easily modified
+
+## Sections Included
+
+- **Navigation**: Fixed top navigation with smooth scrolling
+- **Hero**: Eye-catching hero section with call-to-action buttons
+- **Features**: Three-column feature showcase
+- **Gallery**: Photo gallery section (ready for your images)
+- **Contact**: Contact section with call-to-action
+- **Footer**: Clean footer with links
+
+## Development
+
+This project uses:
+- Next.js 15 with App Router
+- TypeScript for type safety
+- Tailwind CSS for styling
+- ESLint for code quality
+
+## Deployment
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
