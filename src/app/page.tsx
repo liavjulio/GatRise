@@ -675,13 +675,13 @@ export default function Home() {
               🌿 GatRise
             </div>
             <p className="text-gray-400 mb-6">ירידה במשקל, פוקוס ואנרגיה בטיפה אחת</p>
-            <div className="flex justify-center items-center gap-8">
+            {/* <div className="flex justify-center items-center gap-8">
               <button className="text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-sm">תנאי שימוש</button>
               <span className="text-gray-600">•</span>
               <button className="text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-sm">מדיניות פרטיות</button>
               <span className="text-gray-600">•</span>
               <button className="text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-sm">יצירת קשר</button>
-            </div>
+            </div> */}
             <div className="mt-8 pt-8 border-t border-gray-800 text-gray-400 text-sm">
               © 2025 GatRise. כל הזכויות שמורות.
             </div>
