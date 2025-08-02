@@ -533,7 +533,7 @@ export default function Home() {
             {/* Package 1 */}
             <div className="reference-card reference-hover-lift">
               <div className="text-center">
-                <div className="text-4xl mb-4">🧴</div>
+                <div className="text-4xl mb-4">🍯</div>
                 <h3 className="text-2xl font-bold mb-4 reference-text-primary">בקבוקון 1</h3>
                 <div className="text-4xl font-bold reference-green mb-6">₪500</div>
                 <div className="reference-text-muted text-sm mb-6">משלוח חינם במרכז</div>
@@ -554,16 +554,16 @@ export default function Home() {
                 🔥 הכי פופולרי
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">🧴🧴</div>
+                <div className="text-4xl mb-4">🍯🍯</div>
                 <h3 className="text-2xl font-bold mb-4 reference-text-primary">2 בקבוקונים</h3>
-                <div className="text-4xl font-bold text-yellow-400 mb-2">₪900</div>
+                <div className="text-4xl font-bold reference-green mb-2">₪900</div>
                 <div className="text-sm reference-text-muted line-through mb-4">₪1000</div>
-                <div className="reference-text-muted text-sm mb-6">חסכון של ₪100</div>
+                <div className="text-lg font-bold text-red-500 mb-6">חסכון של ₪100</div>
                 <a 
                   href="https://wa.me/972524109207?text=שלום, אני מעוניין להזמין 2 בקבוקונים של GatRise (900 שקל)"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-4 rounded-lg text-lg font-bold transition-all duration-300 w-full inline-block text-center"
+                  className="reference-button w-full"
                 >
                   הזמן עכשיו
                 </a>
@@ -573,11 +573,11 @@ export default function Home() {
             {/* Package 3 */}
             <div className="reference-card reference-hover-lift">
               <div className="text-center">
-                <div className="text-4xl mb-4">🧴🧴🧴</div>
+                <div className="text-4xl mb-4">🍯🍯🍯</div>
                 <h3 className="text-2xl font-bold mb-4 reference-text-primary">3 בקבוקונים</h3>
                 <div className="text-4xl font-bold reference-green mb-2">₪1300</div>
                 <div className="text-sm reference-text-muted line-through mb-4">₪1500</div>
-                <div className="reference-text-muted text-sm mb-6">חסכון של ₪200</div>
+                <div className="text-lg font-bold text-red-500 mb-6">חסכון של ₪200</div>
                 <a 
                   href="https://wa.me/972524109207?text=שלום, אני מעוניין להזמין 3 בקבוקונים של GatRise (1300 שקל)"
                   target="_blank"
