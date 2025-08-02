@@ -1,57 +1,11 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect } from "react";
 
 // IMPORTANT: WhatsApp number is set to 0524109207
 // Format: Israeli phone number format
 
 export default function Home() {
-  useEffect(() => {
-    // Smooth scroll animation for navbar links
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href')?.substring(1);
-        const targetElement = document.getElementById(targetId || '');
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Navbar scroll effect
-    const navbar = document.querySelector('nav');
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        navbar?.classList.add('navbar-scrolled');
-      } else {
-        navbar?.classList.remove('navbar-scrolled');
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div 
-      className="min-h-screen text-white" 
-      dir="rtl"
-    >
-      {/* Ultra minimal overlay for maximum brightness */}
-      <div 
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          background: 'rgba(0, 0, 0, 0.01)',
-          zIndex: -1
-        }}
-      ></div>
-      
+    <div className="min-h-screen bg-black text-white" dir="rtl">
       {/* Navigation */}
       <nav className="reference-nav fixed top-0 w-full z-50">
         <div className="container mx-auto px-4 md:px-6 py-4">
@@ -63,16 +17,16 @@ export default function Home() {
             
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center space-x-8 space-x-reverse">
-              <a href="#home" className="nav-link reference-text-secondary font-medium">
+              <a href="#home" className="reference-text-secondary hover:reference-text-primary transition-colors duration-300 font-medium">
                 בית
               </a>
-              <a href="#benefits" className="nav-link reference-text-secondary font-medium">
+              <a href="#benefits" className="reference-text-secondary hover:reference-text-primary transition-colors duration-300 font-medium">
                 יתרונות
               </a>
-              <a href="#testimonials" className="nav-link reference-text-secondary font-medium">
+              <a href="#testimonials" className="reference-text-secondary hover:reference-text-primary transition-colors duration-300 font-medium">
                 המלצות
               </a>
-              <a href="#order" className="nav-link reference-text-secondary font-medium">
+              <a href="#order" className="reference-text-secondary hover:reference-text-primary transition-colors duration-300 font-medium">
                 הזמנה
               </a>
             </div>
@@ -91,16 +45,27 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="reference-hero relative min-h-screen">        
+      <section id="home" className="reference-hero relative min-h-screen">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/photo1.jpeg"
+            alt="GatRise Background"
+            fill
+            className="object-cover opacity-40"
+            priority
+          />
+        </div>
+        
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-center min-h-screen px-6">
           <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 reference-text-primary leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 reference-text-primary leading-tight reference-fade-in">
               🌿 GatRise
             </h1>
             
-            <div className="max-w-4xl mx-auto">
-              <div className="reference-card mb-8">
+            <div className="max-w-4xl mx-auto reference-slide-up">
+              <div className="reference-card p-8 mb-8">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 reference-green">
                   גת – סוד עתיק, תוצאה מודרנית
                 </h3>
@@ -152,18 +117,16 @@ export default function Home() {
       <section id="benefits" className="reference-section">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">✅</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
-              מה GatRise עושה עבורך?
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary reference-fade-in">
+              ✅ מה GatRise עושה עבורך?
             </h2>
           </div>
           
+          {/* Benefits with integrated photos */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="reference-card text-center reference-hover-lift">
-                <div className="text-4xl mb-4">🔥</div>
+                <div className="text-3xl mb-3">🔥</div>
                 <h3 className="text-lg font-semibold mb-3 reference-text-primary">מדכא תיאבון</h3>
                 <p className="reference-text-secondary text-sm leading-relaxed">
                   מפחית רעב, ונותן תחושת שובע
@@ -171,7 +134,7 @@ export default function Home() {
               </div>
               
               <div className="reference-card text-center reference-hover-lift">
-                <div className="text-4xl mb-4">⚡</div>
+                <div className="text-3xl mb-3">⚡</div>
                 <h3 className="text-lg font-semibold mb-3 reference-text-primary">מעניק אנרגיה נקייה</h3>
                 <p className="reference-text-secondary text-sm leading-relaxed">
                   לאורך היום – בלי קפאין, בלי התרסקות
@@ -179,7 +142,7 @@ export default function Home() {
               </div>
               
               <div className="reference-card text-center reference-hover-lift">
-                <div className="text-4xl mb-4">🎯</div>
+                <div className="text-3xl mb-3">🎯</div>
                 <h3 className="text-lg font-semibold mb-3 reference-text-primary">משפר ריכוז וחדות</h3>
                 <p className="reference-text-secondary text-sm leading-relaxed">
                   מושלם ללמידה, נהיגה, עבודה
@@ -187,7 +150,7 @@ export default function Home() {
               </div>
               
               <div className="reference-card text-center reference-hover-lift">
-                <div className="text-4xl mb-4">💚</div>
+                <div className="text-3xl mb-3">💚</div>
                 <h3 className="text-lg font-semibold mb-3 reference-text-primary">מעורר את החשק המיני</h3>
                 <p className="reference-text-secondary text-sm leading-relaxed">
                   טבעי, עדין ומורגש
@@ -195,17 +158,18 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="relative">
+            <div className="relative reference-slide-up">
               <Image
-                src="/images/photo1.jpeg"
+                src="/images/photo2.jpeg"
                 alt="GatRise - מוצר טבעי לירידה במשקל"
                 width={500}
                 height={500}
-                className="w-full h-96 object-cover rounded-3xl shadow-2xl reference-hover-lift"
+                className="w-full h-96 object-cover rounded-2xl shadow-2xl reference-hover-lift"
               />
             </div>
           </div>
           
+          {/* Additional benefits */}
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="reference-card reference-hover-lift">
               <div className="text-4xl mb-4">🌱</div>
@@ -230,11 +194,8 @@ export default function Home() {
       <section className="reference-section-alt">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">💧</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
-              איך משתמשים?
+              💧 איך משתמשים?
             </h2>
           </div>
           
@@ -282,12 +243,10 @@ export default function Home() {
       <section className="reference-section py-12">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="reference-card">
-              <h3 className="text-2xl font-bold mb-4 text-yellow-400">⚠️ שימו לב:</h3>
-              <div className="text-lg reference-text-secondary space-y-2">
-                <p>❌ לא מומלץ לחולי סוכרת, בעיות לב, או למי שנוטל תרופות מרשם</p>
-                <p>✅ מומלץ להתייעץ עם רופא לפני תחילת שימוש</p>
-              </div>
+            <h3 className="text-2xl font-bold mb-4 text-yellow-400">⚠️ שימו לב:</h3>
+            <div className="text-lg reference-text-secondary space-y-2">
+              <p>❌ לא מומלץ לחולי סוכרת, בעיות לב, או למי שנוטל תרופות מרשם</p>
+              <p>✅ מומלץ להתייעץ עם רופא לפני תחילת שימוש</p>
             </div>
           </div>
         </div>
@@ -297,11 +256,8 @@ export default function Home() {
       <section id="testimonials" className="reference-section-alt">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">⭐</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
-              לקוחות ממליצים:
+              ⭐ לקוחות ממליצים:
             </h2>
           </div>
           
@@ -363,162 +319,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="reference-section py-16">
-        <div className="container mx-auto px-6">
-          <div className="reference-card max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-6">
-                ✨ גלריית פרימיום
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 reference-text-primary">
-                🌿 GatRise במציאות
-              </h2>
-              <p className="text-lg reference-text-secondary max-w-2xl mx-auto">
-                גלו את החוויה הטבעית שמשנה חיים - תמונות אמיתיות של לקוחות מרוצים
-              </p>
-            </div>
-            
-            <div className="contained-gallery premium-gallery grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
-            <div className="premium-gallery-item h-64">
-              <Image
-                src="/images/photo2.jpeg"
-                alt="GatRise - תמצית טבעית איכותית"
-                width={400}
-                height={400}
-                className="premium-gallery-image w-full h-full object-cover"
-              />
-              <div className="premium-gallery-overlay">
-                <div className="premium-gallery-title">תמצית טבעית</div>
-                <div className="premium-gallery-subtitle">איכות פרימיום</div>
-              </div>
-            </div>
-            
-            <div className="premium-gallery-item h-64">
-              <Image
-                src="/images/photo5.jpeg"
-                alt="GatRise - שימוש יומיומי"
-                width={400}
-                height={400}
-                className="premium-gallery-image w-full h-full object-cover"
-              />
-              <div className="premium-gallery-overlay">
-                <div className="premium-gallery-title">שימוש יומיומי</div>
-                <div className="premium-gallery-subtitle">נוח ויעיל</div>
-              </div>
-            </div>
-            
-            <div className="premium-gallery-item h-64">
-              <Image
-                src="/images/photo6.jpeg"
-                alt="GatRise - תוצאות מרשימות"
-                width={400}
-                height={400}
-                className="premium-gallery-image w-full h-full object-cover"
-              />
-              <div className="premium-gallery-overlay">
-                <div className="premium-gallery-title">תוצאות מרשימות</div>
-                <div className="premium-gallery-subtitle">שינוי אמיתי</div>
-              </div>
-            </div>
-            
-            <div className="premium-gallery-item h-64">
-              <Image
-                src="/images/photo7.jpeg"
-                alt="GatRise - אנרגיה וחיוניות"
-                width={400}
-                height={400}
-                className="premium-gallery-image w-full h-full object-cover"
-              />
-              <div className="premium-gallery-overlay">
-                <div className="premium-gallery-title">אנרגיה וחיוניות</div>
-                <div className="premium-gallery-subtitle">כל יום</div>
-              </div>
-            </div>
-            
-            <div className="premium-gallery-item h-64">
-              <Image
-                src="/images/photo8.jpeg"
-                alt="GatRise - רכיבים טבעיים"
-                width={400}
-                height={400}
-                className="premium-gallery-image w-full h-full object-cover"
-              />
-              <div className="premium-gallery-overlay">
-                <div className="premium-gallery-title">רכיבים טבעיים</div>
-                <div className="premium-gallery-subtitle">בטוח ויעיל</div>
-              </div>
-            </div>
-            
-            <div className="premium-gallery-item h-64">
-              <Image
-                src="/images/photo9.jpeg"
-                alt="GatRise - מיקוד ובהירות"
-                width={400}
-                height={400}
-                className="premium-gallery-image w-full h-full object-cover"
-              />
-              <div className="premium-gallery-overlay">
-                <div className="premium-gallery-title">מיקוד ובהירות</div>
-                <div className="premium-gallery-subtitle">ביצועים משופרים</div>
-              </div>
-            </div>
-            
-            <div className="premium-gallery-item h-64">
-              <Image
-                src="/images/photo10.jpeg"
-                alt="GatRise - בריאות ואיכות חיים"
-                width={400}
-                height={400}
-                className="premium-gallery-image w-full h-full object-cover"
-              />
-              <div className="premium-gallery-overlay">
-                <div className="premium-gallery-title">בריאות ואיכות</div>
-                <div className="premium-gallery-subtitle">חיים טובים יותר</div>
-              </div>
-            </div>
-            
-            <div className="premium-gallery-item h-64">
-              <Image
-                src="/images/photo11.jpeg"
-                alt="GatRise - הצלחה ושביעות רצון"
-                width={400}
-                height={400}
-                className="premium-gallery-image w-full h-full object-cover"
-              />
-              <div className="premium-gallery-overlay">
-                <div className="premium-gallery-title">הצלחה ושביעות רצון</div>
-                <div className="premium-gallery-subtitle">לקוחות מרוצים</div>
-              </div>
-            </div>
-          </div>
-          
-            <div className="text-center">
-              <a 
-                href="https://wa.me/972524109207?text=שלום, ראיתי את הגלריה ואני מעוניין להזמין GatRise"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="reference-button text-lg px-8 py-4"
-              >
-                💫 הזמן את החוויה שלך עכשיו
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section id="order" className="reference-section">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">💸</span>
-            </div>
             <div className="inline-block bg-yellow-400 text-yellow-900 px-6 py-2 rounded-full text-sm font-bold mb-6">
               🔥 מחיר השקה מוגבל
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
-              מחיר השקה מוגבל:
+              💸 מחיר השקה מוגבל:
             </h2>
           </div>
           
@@ -542,7 +351,7 @@ export default function Home() {
             </div>
             
             {/* Package 2 - Popular */}
-            <div className="reference-card reference-hover-lift relative scale-105 pricing-popular">
+            <div className="reference-card reference-hover-lift relative scale-105">
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-yellow-900 px-6 py-2 rounded-full text-sm font-bold">
                 🔥 הכי פופולרי
               </div>
@@ -596,11 +405,8 @@ export default function Home() {
       <section id="faq" className="reference-section-alt">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">❓</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
-              שאלות נפוצות (FAQ):
+              ❓ שאלות נפוצות (FAQ):
             </h2>
           </div>
           
@@ -628,17 +434,130 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Target Audience Section */}
+      <section className="reference-section">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
+              🎯 למי זה מתאים?
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="reference-card text-center reference-hover-lift">
+              <div className="text-4xl mb-4">👫</div>
+              <p className="text-lg reference-text-primary">גברים ונשים שרוצים לרדת במשקל בלי סבל</p>
+            </div>
+            
+            <div className="reference-card text-center reference-hover-lift">
+              <div className="text-4xl mb-4">⚡</div>
+              <p className="text-lg reference-text-primary">מי שמחפש יותר אנרגיה, חיוניות, ריכוז</p>
+            </div>
+            
+            <div className="reference-card text-center reference-hover-lift">
+              <div className="text-4xl mb-4">❤️</div>
+              <p className="text-lg reference-text-primary">זוגות שמעוניינים להחזיר את התשוקה</p>
+            </div>
+            
+            <div className="reference-card text-center reference-hover-lift">
+              <div className="text-4xl mb-4">🌿</div>
+              <p className="text-lg reference-text-primary">כל מי שרוצה פתרון פשוט, טבעי – שעובד</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section className="reference-section-alt">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 reference-text-primary">
+              📸 גלריית תמונות
+            </h2>
+            <p className="text-xl reference-text-secondary mb-8">
+              צפו במוצר GatRise מכל הזוויות - איכות פרימיום שאתם יכולים לראות
+            </p>
+          </div>
+          
+          {/* Featured promotional images */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
+            <div className="relative group overflow-hidden rounded-3xl shadow-xl reference-hover-lift">
+              <Image
+                src="/images/photo4.jpeg"
+                alt="GatRise - מוצר איכותי"
+                width={400}
+                height={500}
+                className="w-full h-80 object-cover"
+              />
+              <div className="absolute bottom-4 left-4 right-4 z-20 text-white">
+                <h3 className="text-lg font-bold mb-1">איכות פרימיום</h3>
+                <p className="text-sm opacity-90">בקבוק זכוכית יוקרתי</p>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-3xl shadow-xl reference-hover-lift">
+              <Image
+                src="/images/photo5.jpeg"
+                alt="GatRise - תמצית טבעית"
+                width={400}
+                height={500}
+                className="w-full h-80 object-cover"
+              />
+              <div className="absolute bottom-4 left-4 right-4 z-20 text-white">
+                <h3 className="text-lg font-bold mb-1">תמצית טבעית</h3>
+                <p className="text-sm opacity-90">100% GAT טבעי</p>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-3xl shadow-xl reference-hover-lift">
+              <Image
+                src="/images/photo6.jpeg"
+                alt="GatRise - קל לשימוש"
+                width={400}
+                height={500}
+                className="w-full h-80 object-cover"
+              />
+              <div className="absolute bottom-4 left-4 right-4 z-20 text-white">
+                <h3 className="text-lg font-bold mb-1">קל לשימוש</h3>
+                <p className="text-sm opacity-90">מינון מדויק</p>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-3xl shadow-xl reference-hover-lift">
+              <Image
+                src="/images/photo7.jpeg"
+                alt="GatRise - תוצאות מהירות"
+                width={400}
+                height={500}
+                className="w-full h-80 object-cover"
+              />
+              <div className="absolute bottom-4 left-4 right-4 z-20 text-white">
+                <h3 className="text-lg font-bold mb-1">תוצאות מהירות</h3>
+                <p className="text-sm opacity-90">השפעה תוך דקות</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <a 
+              href="https://wa.me/972524109207?text=שלום, אני רוצה לראות עוד תמונות של המוצר GatRise"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="reference-button reference-hover-lift"
+            >
+              📱 למידע נוסף ותמונות
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="reference-section">
         <div className="container mx-auto text-center px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-600 rounded-full mb-6 mx-auto">
-              <span className="text-3xl">💬</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 reference-text-primary">
-              דבר אחרון…
+              💬 דבר אחרון…
             </h2>
-            
             <div className="text-xl reference-text-secondary mb-8 leading-relaxed space-y-4">
               <p>לא צריך לסבול כדי לרדת במשקל.</p>
               <p>לא צריך לפחד מאיבוד חשק, עייפות או תסכול.</p>

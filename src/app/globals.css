@@ -2,20 +2,436 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+=== EASY BACKGROUND SWITCHING ===
+To change the background image, simply modify line 46:
+- photo1.jpeg (current)
+- photo2.jpeg, photo3.jpeg, photo4.jpeg, photo5.jpeg, photo6.jpeg, etc.
+Just change the number and save!
+================================
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1a1a1a;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a1a1a;
+    --foreground: #ffffff;
   }
 }
 
+/* Global page background with product image */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  position: relative;
+}
+
+/* Background image container - Change photo1.jpeg to any photo number to switch background */
+/* 
+=== HOW TO CHANGE BACKGROUND ===
+1. Find the line below with background-image
+2. Change photo1.jpeg to photo2.jpeg, photo3.jpeg, photo4.jpeg, photo5.jpeg, etc.
+3. Save the file
+4. Refresh the browser - background will update instantly!
+Available photos: photo1.jpeg through photo11.jpeg
+================================
+*/
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/photo1.jpeg'); /* ← CHANGE THIS LINE TO SWITCH BACKGROUND */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -2;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Ultra minimal overlay for maximum brightness and vibrant look */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.01);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Minimal, performant animations only */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scroll animations */
+@keyframes scrollFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Simple animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* 
+=== SECTION ICONS ===
+Each main section has an icon at the start with gradient background:
+- Benefits: ✅ (green gradient)
+- Usage: 💧 (blue gradient) 
+- Testimonials: ⭐ (yellow gradient)
+- Pricing: 💸 (purple gradient)
+- FAQ: ❓ (indigo gradient)
+- Final CTA: 💬 (red gradient)
+================================
+*/
+
+/* Simple timing delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Optimized hover effects for better performance */
+.reference-hover-lift {
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.reference-hover-lift:hover {
+  transform: translateY(-2px) translateZ(0);
+}
+
+/* Clean reference site styles - transparent to show background */
+.reference-hero {
+  background: transparent;
+  color: #ffffff;
+}
+
+.reference-section {
+  background: rgba(26, 26, 26, 0.3);
+  color: #ffffff;
+  padding: 4rem 0;
+}
+
+.reference-section-alt {
+  background: rgba(42, 42, 42, 0.4);
+  color: #ffffff;
+  padding: 4rem 0;
+}
+
+.reference-card {
+  background: rgba(42, 42, 42, 0.8);
+  border: 1px solid rgba(68, 68, 68, 0.6);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  will-change: transform, background-color;
+  backface-visibility: hidden;
+}
+
+.reference-card:hover {
+  background: rgba(51, 51, 51, 0.9);
+  border-color: rgba(102, 102, 102, 0.8);
+  transform: translateY(-2px) translateZ(0);
+}
+
+.reference-button {
+  background: #22c55e;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.reference-button:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.reference-button-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.reference-button-outline:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.reference-nav {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(68, 68, 68, 0.6);
+}
+
+.reference-text-primary {
+  color: #ffffff;
+}
+
+.reference-text-secondary {
+  color: #cccccc;
+}
+
+.reference-text-muted {
+  color: #888888;
+}
+
+.reference-green {
+  color: #22c55e;
+}
+
+.reference-bg-green {
+  background-color: #22c55e;
+}
+
+.reference-border-green {
+  border-color: #22c55e;
+}
+
+/* Optimized Premium Gallery Styles - Reduced lag */
+.premium-gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 0.3s ease;
+  background: rgba(42, 42, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.premium-gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(34, 197, 94, 0.1) 50%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+  will-change: opacity;
+}
+
+.premium-gallery-item:hover::before {
+  opacity: 1;
+}
+
+.premium-gallery-item:hover {
+  transform: translateY(-4px) translateZ(0);
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.4),
+    0 4px 12px rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.premium-gallery-image {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.premium-gallery-item:hover .premium-gallery-image {
+  transform: scale(1.05) translateZ(0);
+}
+
+.premium-gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.2s ease;
+  z-index: 3;
+  will-change: transform;
+}
+
+.premium-gallery-item:hover .premium-gallery-overlay {
+  transform: translateY(0);
+}
+
+.premium-gallery-title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.premium-gallery-subtitle {
+  color: #22c55e;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+/* Premium section styling */
+.premium-section {
+  background: linear-gradient(135deg, 
+    rgba(26, 26, 26, 0.95) 0%, 
+    rgba(42, 42, 42, 0.9) 50%, 
+    rgba(26, 26, 26, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.premium-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Navigation link animations */
+.nav-link {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::before {
+  width: 80%;
+}
+
+.nav-link:hover {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e !important;
+  transform: translateY(-2px);
+}
+
+/* Navbar scroll animation */
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Section animation on scroll */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contained Gallery Styles */
+.contained-gallery {
+  background: rgba(42, 42, 42, 0.6);
+  border: 1px solid rgba(68, 68, 68, 0.4);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(15px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.contained-gallery .premium-gallery-item {
+  border-radius: 12px;
+  background: rgba(26, 26, 26, 0.7);
+  border: 1px solid rgba(68, 68, 68, 0.3);
+}
+
+.contained-gallery .premium-gallery-item:hover {
+  background: rgba(42, 42, 42, 0.8);
+  border-color: rgba(34, 197, 94, 0.4);
 }
