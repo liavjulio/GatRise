@@ -125,7 +125,7 @@ export default function Home() {
                 הגיע הזמן לפתרון טבעי, נעים ומדויק – שמביא תוצאות.
               </p>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                <strong>GatRise</strong> הוא תמצית שמן גת טבעית, בבקבוקון יוקרתי של 10 מ"ל,<br />
+                <strong>GatRise</strong> הוא תמצית שמן גת טבעית, בבקבוקון יוקרתי של 10 מ&quot;ל,<br />
                 שמדכאת תיאבון, מגבירה ריכוז, מחזקת את האנרגיה – ומעוררת את החשק המיני.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end items-center">
@@ -317,7 +317,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-100 hover:shadow-xl transition-all duration-300">
                 <div className="text-yellow-500 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  "ירדתי 4 קילו תוך חודש וחצי בלי לשנות כמעט כלום. תחושת שובע משוגעת ויעילה"
+                  &quot;ירדתי 4 קילו תוך חודש וחצי בלי לשנות כמעט כלום. תחושת שובע משוגעת ויעילה&quot;
                 </p>
                 <div className="font-semibold text-gray-900">מעיין, בת 33</div>
               </div>
@@ -325,7 +325,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100 hover:shadow-xl transition-all duration-300">
                 <div className="text-yellow-500 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  "אני מתרכז פי 2 בעבודה. והאמת? גם החשק המיני עלה."
+                  &quot;אני מתרכז פי 2 בעבודה. והאמת? גם החשק המיני עלה.&quot;
                 </p>
                 <div className="font-semibold text-gray-900">דניאל, בן 39</div>
               </div>
@@ -333,7 +333,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-100 hover:shadow-xl transition-all duration-300">
                 <div className="text-yellow-500 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  "פשוט עובד. טעם טבעי, תחושה טובה, בלי כאבי ראש."
+                  &quot;פשוט עובד. טעם טבעי, תחושה טובה, בלי כאבי ראש.&quot;
                 </p>
                 <div className="font-semibold text-gray-900">אור, בן 27</div>
               </div>
